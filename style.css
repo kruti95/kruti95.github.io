@@ -1,0 +1,488 @@
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #f8f9fa;
+    padding: 30px 20px;
+    position: fixed;
+    height: 90vh;
+    border-right: 1px solid #ddd;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h2 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; /* circle shape */
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sidebar p {
+    color: #007bff;
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar nav {
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+.sidebar nav a {
+    display: block;
+    margin: 8px 0;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar nav a:hover {
+    color: #007bff;
+}
+
+.footer-icons {
+    margin-bottom: 20px;
+}
+
+.footer-icons a {
+    color: #333;
+    margin: 0 5px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-icons a:hover {
+    color: #007bff;
+}
+
+.main-content {
+    margin-left: 300px;
+    padding: 50px 60px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Section title fade (ABOUT ME) */
+section#about h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;  /* faded gray */
+    margin-bottom: 10px;
+}
+
+/* Portfolio logos styles */
+.portfolio-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.portfolio-logos img {
+    height: 140px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-logos img:hover {
+    opacity: 1;
+}
+
+/* Big bold "Who am I?" */
+section#about h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Paragraph text lighter */
+section#about p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;  /* soft gray */
+    margin-bottom: 16px;
+}
+
+/* Content container (for About Me text) */
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+/* ==== PORTFOLIO GRID STYLES ==== */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+}
+
+.caption {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Fade "My Work" label */
+.section-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999; /* faded gray */
+    margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Big bold heading below it */
+#portfolio h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* ========= TESTIMONIALS GRID STYLE ========== */
+section#testimonials h2.section-label {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+/* Section main heading */
+section#testimonials h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* Blockquote styling */
+section#testimonials blockquote {
+    font-size: 18px;
+    color: #555;
+    border-left: 4px solid #ddd;
+    padding-left: 16px;
+    line-height: 1.7;
+    max-width: 1200px;
+    margin: 20px auto;
+    font-style: italic;
+}
+
+/* Citation styling */
+section#testimonials cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+
+/* ===========Outside Work Section============= */
+/* Outside Work Section (Hobbies) */
+section#outside {
+    margin-top: 80px;
+    text-align: left;  /* align all content to right */
+    padding-left: 0;  /* Give some left margin */
+}
+
+section#outside h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+section#outside h3 {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hobby-group {
+    margin-bottom: 40px;
+}
+
+.hobby-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+    padding-left: 5px;
+}
+
+.hobby-row {
+    display: flex;
+    justify-content: flex-start;  /* Left align */
+    gap: 20px;
+    flex-wrap: wrap;  /* So it wraps on small screen */
+}
+
+.hobby-row img {
+    height: 250px; /* image size */
+    width: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.hobby-row img:hover {
+    transform: scale(1.05);
+}
+
+.hobby-caption {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 270px;
+    font-size: 16px;
+    font-weight: 600;
+    width: fit-content;
+    margin: 12px 0 0 0;
+    border-radius: 4px;
+}
+
+
+/* ===== Contact Section ===== */
+#contact {
+    max-width: 600px;          /* LIMIT WIDTH */
+    margin: 0 0 100px 0;       /* ALIGN LEFT */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   /* ENSURE LEFT */
+    text-align: left;
+}
+
+#contact h2.section-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+#contact h3 {
+    font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+    width: 100%;               /* FULL WIDTH INSIDE CONTACT */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-icon {
+    background-color: #f4f6fa;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    color: #007bff;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;               /* FULL WIDTH FORM */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: none;
+    background-color: #f4f6fa;
+    border-radius: 6px;
+    font-size: 16px;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Now your HOME section comes below: */
+#home {
+    background-image: url('images/1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 100vh;
+    width: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+
+#home h1 {
+    font-size: 48px;
+    margin: 0; 
+}
+
+.resume-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 15px 80px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.resume-btn:hover {
+    background-color: #0056b3;
+}
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -300px; /* hide offscreen */
+        width: 250px;
+        height: 100%;
+        background: #f8f9fa;
+        padding: 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .close-btn {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
