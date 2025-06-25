@@ -131,6 +131,7 @@ section#about h3 {
     font-family: 'Playfair Display', serif;
 }
 
+
 /* Paragraph text lighter */
 section#about p {
     font-size: 16px;
@@ -234,6 +235,209 @@ section#testimonials cite {
 
 
 
+/* ========== Work Experience Timeline ========== */
+.timeline {
+    position: relative;
+    margin-left: 40px;
+    padding-right: 38px; 
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 45px; /* half of icon width (56px / 2) */
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #eaeaf0;
+}
+
+.timeline-entry {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 14px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 3px solid #f2f2f2;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.04);
+}
+
+.timeline-icon::after {
+    content: "";
+    position: absolute;
+    right: -8px; /* distance from circle */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #f8f9fc; /* same color as .timeline-item background */
+}
+
+.timeline-icon img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+}
+
+.timeline-item {
+    background-color: #f8f9fc;
+    padding: 24px 28px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    margin-left: 80px;
+}
+
+#experience h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.timeline-item h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 6px;
+}
+
+.timeline-item .role {
+    font-size: 15px;    
+    color: #777;
+    margin-bottom: 6px;
+}
+
+.timeline-date .date{
+    font-size: 14px;    
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.timeline-item ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.timeline-item ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+}
+
+
+/* ==========Education Accordion Styles========= */
+.section-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.section-heading {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;  /* pushes the + to the right */
+    align-items: center;
+    padding: 18px 24px;
+    background-color: #f5f6fa;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header.active {
+    background-color: #2196f3;
+    color: #fff;
+}
+
+.accordion-header:hover {
+    background-color: #1976d2;
+}
+
+.accordion-icon {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    display: none;
+    background-color: #fff;
+    padding: 20px 24px;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.accordion-content p {
+    margin-bottom: 12px;
+}
+
+.accordion-content ul {
+    margin: 10px 0 0 20px;
+}
+
+.accordion-content ul li {
+    margin-bottom: 8px;
+}
+
+/* Active Accordion */
+.accordion.active .accordion-header {
+    background-color: #2196f3;
+    color: #fff;
+}
+
+.accordion.active .accordion-content {
+    display: block;
+}
+
+.accordion.active .accordion-icon {
+    transform: rotate(180deg);
+    content: "-";
+}
+
+
 /* ===========Outside Work Section============= */
 /* Outside Work Section (Hobbies) */
 section#outside {
@@ -297,9 +501,11 @@ section#outside h3 {
     font-size: 16px;
     font-weight: 600;
     width: fit-content;
-    margin: 12px 0 0 0;
+    margin-top: 20px;
     border-radius: 4px;
+    margin-bottom: 30px;
 }
+
 
 
 /* ===== Contact Section ===== */
