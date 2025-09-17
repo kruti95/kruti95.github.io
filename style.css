@@ -190,6 +190,49 @@ section#about p {
     text-align: center;
 }
 
+/* 4th Project */
+
+/* Section spacing */
+#portfolio { 
+  margin-top: 40px; 
+}
+
+/* Make the whole tile clickable & keep caption styles */
+#portfolio .portfolio-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Card hover lift */
+#portfolio .portfolio-item {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+#portfolio .portfolio-item:hover {
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+/* Image hover zoom (keeps your existing effect, but scoped) */
+#portfolio .portfolio-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Extra safety: caption inside #portfolio */
+#portfolio .caption {
+  font-size: 16px;
+  color: #333;
+  margin-top: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  #portfolio .portfolio-grid { gap: 16px; }
+  #portfolio .portfolio-item img { height: 220px; }
+}
+
 /* Fade "My Work" label */
 .section-label {
     font-size: 14px;
